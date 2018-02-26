@@ -1,0 +1,62 @@
+
+<div class="roster" scope="roster">
+    <!-- the dialog header  -->
+    <div class="header">
+        <div class="title">
+            {{ paramTitle }}
+        </div>
+        <div class="icons">
+            <!-- filter field  -->
+            <input v-model="dataItemFilter"
+                class="filter"
+                v-bind:placeholder="$t('filter-items-ph')"
+                v-bind:title="$t('filter-items-tt')"
+                v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+
+            <!-- add button  -->
+            <i class="fa fa-plus-circle"
+                v-on:click="eventItemAdd"
+                v-bind:title="$t('add-item-tt')"
+                v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+            </i>
+        </div>
+    </div>
+
+    <!-- the dialog body  -->
+    <div class="body perfect-scrollbar" ref="body">
+        <!--  detect special cases  -->
+        <div v-if="dataItems.length === 0" class="hint">
+            ({{ $t("no-items") }})
+        </div>
+        <div v-if="dataItems.length > 0 && dataItemsFiltered.length === 0"
+            class="hint">
+            ({{ $t("no-items-filter") }})
+        </div>
+
+        <!-- interate over all items  -->
+        <div v-id="dataItemsFiltered.length > 0" class="items">
+            <div v-for="item in dataItemsFiltered"
+                v-bind:class="{ item: true, selected: stateItemSelected !== null
+                    && stateItemSelected.id === item.id }"
+                v-on:click="eventItemSelect(item)">
+                <div class="text">
+                    <span v-if="item.name !== null">
+                        {{ item.name }}
+                    </span>
+                    <span v-if="item.name === null" class="unnamed-item">
+                        ({{ $t("unnamed-item") }})
+                    </span>
+                </div>
+                <div class="icons">
+                    <!--  delete button  -->
+                    <i class="fa fa-minus-circle"
+                        v-bind:title="$t('delete-item-tt')"
+                        v-tippy="{ delay: [ 1000, 200 ], arrow: true }"
+                        v-on:click.stop="eventItemDelete(item)">
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

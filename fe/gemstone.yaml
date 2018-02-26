@@ -1,0 +1,17 @@
+
+header: |
+    UnP ~ Units and Persons (HUICA Example Application)
+    Copyright 2018 (c) Ralf S. Engelschall <http://engelschall.com>
+    Licensed under Apache-2.0 <https://spdx.org/licenses/Apache-2.0>
+
+meta:
+    title:       "UnP"
+    description: "Units and Persons"
+    author:      "Ralf S. Engelschall"
+    keywords:    "units, persons, example"
+
+path:
+    output:      ./dst
+    source:      ./src
+    main:        ./src/main.js
+

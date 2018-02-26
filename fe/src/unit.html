@@ -1,0 +1,107 @@
+
+<div class="unit" scope="unit">
+    <div class="header">
+        <div class="title">{{ $t("title") }}</div>
+    </div>
+    <div class="body perfect-scrollbar">
+        <table class="form">
+            <!-- Unit.name (attribute) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("name") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the name of this unit"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <input class="textfield"
+                        v-model="dataName"
+                        v-bind:placeholder="$t('enter-name')">
+                </td>
+            </tr>
+
+            <!-- Unit.abbreviation (attribute) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("abbreviation") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the abbrevation of this unit"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <input class="textfield"
+                        v-model="dataAbbreviation"
+                        v-bind:placeholder="$t('enter-abbreviation')">
+                </td>
+            </tr>
+
+            <!-- Unit.parentUnit (relationship 0..1) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("parent-unit") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the parent unit of this unit"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <select class="select2"
+                        data-model="dataParentUnit"
+                        data-model-source="dataUnits"
+                        data-allow-clear="true"
+                        v-bind:data-placeholder="$t('select-parent-unit')">
+                        <option value=""></option>
+                        <option v-for="unit in dataUnits"
+                            v-bind:value="unit.id">
+                            {{ unit.name }}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Unit.director (relationship 0..1) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("director") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the director of this unit"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <select class="select2"
+                        data-model="dataDirector"
+                        data-model-source="dataPersons"
+                        data-allow-clear="true"
+                        v-bind:data-placeholder="$t('select-director')">
+                        <option value=""></option>
+                        <option v-for="person in dataPersons"
+                            v-bind:value="person.id">
+                            {{ person.name }}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Unit.members (relationship 1..N) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("members") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the members of this unit"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <select class="select2"
+                        data-model="dataMembers"
+                        data-model-source="dataPersons"
+                        multiple="multiple"
+                        data-allow-clear="true"
+                        v-bind:data-placeholder="$t('select-members')">
+                        <option value=""></option>
+                        <option v-for="person in dataPersons"
+                            v-bind:value="person.id">
+                            {{ person.name }}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="mask-overlay" v-show="stateDisabled">
+    </div>
+</div>
+

@@ -1,0 +1,81 @@
+
+@import "./common.css";
+
+body {
+    user-select:                   none;
+    padding-left:                  20px;
+    padding-top:                   20px;
+    background-color:              #cccccc;
+    cursor:                        default;
+    font-family:                   var(--font-family);
+    font-size:                     var(--font-size);
+}
+
+@scope screen {
+    .screen {
+        width:                     800px;
+        height:                    600px;
+        user-select:               none;
+        border-radius:             4px;
+        box-shadow:                0 2px 4px 0 #999999;
+        display:                   flex;
+        flex-direction:            column;
+        justify-content:           space-between;
+        > .header {
+            height:                32px;
+            border-radius:         4px 4px 0 0;
+            background-color:      var(--color-brown);
+            color:                 var(--color-white);
+            padding:               2px 10px 2px 10px;
+            display:               flex;
+            flex-direction:        row;
+            flex-shrink:           0;
+            justify-content:       space-between;
+            align-items:           center;
+            .title {
+                font-weight:       bold;
+                font-size:         120%;
+            }
+            .subtitle {
+                color:             var(--color-brown-glare);
+            }
+            select.lang {
+                background-color:  var(--color-brown);
+                color:             var(--color-brown-glare);
+                border-color:      var(--color-brown-light);
+                font-size:         80%;
+            }
+        }
+        > .body {
+            flex:                  1;
+            padding:               10px 10px 10px 10px;
+            width:                 calc(100% - 20px);
+            height:                calc(100% - 20px);
+            background-color:      var(--color-white);
+            display:               grid;
+            grid-template-columns: calc(50% - 7px) calc(50% - 7px);
+            grid-template-rows:    calc(50% - 7px) calc(50% - 7px);
+            grid-column-gap:       10px;
+            grid-row-gap:          10px;
+        }
+        > .footer {
+            display:               flex;
+            flex-direction:        row;
+            flex-shrink:           0;
+            justify-content:       space-between;
+            align-items:           center;
+            border-radius:         0 0 4px 4px;
+            background-color:      var(--color-grey);
+            color:                 var(--color-white);
+            padding:               4px 10px 4px 10px;
+            .left,
+            .right {
+                color:             var(--color-grey-light);
+                .resizeHandle {
+                    cursor:        nwse-resize;
+                }
+            }
+        }
+    }
+}
+

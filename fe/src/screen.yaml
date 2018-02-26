@@ -1,0 +1,12 @@
+
+#   English text translations
+en:
+    title:    Units & Persons
+    subtitle: The HUICA Example Application
+    error:    Error
+
+#   German text translations
+de:
+    title:    Einheiten & Personen
+    subtitle: Die HUICA Beispiel-Anwendung
+    error:    Fehler

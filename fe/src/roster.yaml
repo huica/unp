@@ -1,0 +1,22 @@
+
+#   English text translations
+en:
+    title:            Roster
+    no-items:         No items available
+    no-items-filter:  No items left to show due to filter
+    filter-items-ph:  Filter items...
+    filter-items-tt:  Filter the list of items (with a Unix glob expression)
+    add-item-tt:      Add new item
+    delete-item-tt:   Delete this item
+    unnamed-item:     unnamed item
+
+#   German text translations
+de:
+    title:            Roster
+    no-items:         Keine Einträge verfügbar
+    no-items-filter:  Keine Einträge mehr übrig zum anzeigen aufgrund Filter
+    filter-items-ph:  Filtere Einträge...
+    filter-items-tt:  Filtere die Liste der Einträge (mit einem Unix glob-Ausdruck)
+    add-item-tt:      Füge Eintrag hinzu
+    delete-item-tt:   Lösche diesen Eintrag
+    unnamed-item:     unbenannter Eintrag

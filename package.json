@@ -1,0 +1,31 @@
+{
+    "name":                 "unp",
+    "version":              "0.0.0",
+    "homepage":             "https://architecturedissertation.com/",
+    "description":          "Units and Persons (UnP)",
+    "keywords":             [ "huica", "example" ],
+    "author": {
+        "name":             "Ralf S. Engelschall",
+        "url":              "mailto:rse@engelschall.com"
+    },
+    "dependencies": {
+        "npm-run-all":      "~4.1.2",
+        "stmux":            "~1.4.19"
+    },
+    "scripts": {
+        "install":          "npm-run-all -s install:fe install:be",
+        "install:fe":       "cd fe && npm install",
+        "install:be":       "cd be && npm install",
+        "build":            "cd fe && npm run build",
+        "start":            "cd be && npm start",
+        "clean":            "npm-run-all -s clean:fe clean:be",
+        "clean:fe":         "cd fe && npm run clean",
+        "clean:be":         "cd be && npm run clean",
+        "distclean":        "npm-run-all -s distclean:fe distclean:be",
+        "distclean:ui":     "cd fe && npm run distclean",
+        "distclean:sv":     "cd be && npm run distclean",
+        "dev":              "stmux -w always -e \"\\d+ error,!without code style errors\" -m beep,system -- [ \"npm run dev:fe\" : \"npm run dev:be\" ]",
+        "dev:fe":           "cd fe && npm run dev",
+        "dev:be":           "cd be && npm run dev"
+    }
+}
