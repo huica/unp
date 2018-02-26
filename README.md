@@ -5,6 +5,15 @@ Units and Persons (UnP)
 Hierarchical User Interface Component Architecture (HUICA)<br/>
 Example Application
 
+About
+-----
+
+Units and Persons (UnP) is a small example application showcasing the
+Hierarchical User Interface Component Architecture (HUICA) with the help
+of technology stack based on GemstoneJS and GraphQL-IO. UnP is large
+enough to be able to show various aspects of HUICA and small enough to
+be still easy to comprehend.
+
 Screenshot
 ----------
 
