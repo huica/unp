@@ -88,7 +88,7 @@ export default class {
             let ids = Object.keys(units)
             for (let i = 0; i < ids.length; i++) {
                 let p = []
-                for (let j = 0; j < 4; j++) {
+                for (let j = 0; j < 3; j++) {
                     let { name, initials } = makeNameAndInitials()
                     if (j === 0) {
                         p[j] = await person(initials, name, "Manager",
