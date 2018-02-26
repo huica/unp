@@ -1,0 +1,98 @@
+
+<div class="person" scope="person">
+    <div class="header">
+        <div class="title">{{ $t("title") }}</div>
+    </div>
+    <div class="body perfect-scrollbar">
+        <table class="form">
+            <!-- Person.name (attribute) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("name") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the name of the person"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <input class="textfield"
+                        v-model="dataName"
+                        v-bind:placeholder="$t('enter-name')">
+                </td>
+            </tr>
+
+            <!-- Person.initials (attribute) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("initials") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the initials of the person"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <input class="textfield"
+                        v-model="dataInitials"
+                        v-bind:placeholder="$t('enter-initials')">
+                </td>
+            </tr>
+
+            <!-- Person.role (attribute) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("role") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the role of the person"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <input class="textfield"
+                        v-model="dataRole"
+                        v-bind:placeholder="$t('enter-role')">
+                </td>
+            </tr>
+
+            <!-- Person.supervisor (relationship 0..1) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("supervisor") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the supervisor of the person"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <select class="select2"
+                        data-model="dataSupervisor"
+                        data-model-source="dataPersons"
+                        data-allow-clear="true"
+                        v-bind:data-placeholder="$t('select-supervisor')">
+                        <option value=""></option>
+                        <option v-for="person in dataPersons"
+                            v-bind:value="person.id">
+                            {{ person.name }}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Person.belongsTo (relationship 0..1) -->
+            <tr>
+                <td class="label">
+                    <div class="label">{{ $t("unit") }}:</div>
+                </td>
+                <td class="element"
+                    title="Change the unit this person belongs to"
+                    v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                    <select class="select2"
+                        data-model="dataBelongsTo"
+                        data-model-source="dataUnits"
+                        data-allow-clear="true"
+                        v-bind:data-placeholder="$t('select-unit')">
+                        <option value=""></option>
+                        <option v-for="unit in dataUnits"
+                            v-bind:value="unit.id">
+                            {{ unit.name }}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="mask-overlay" v-show="stateDisabled">
+    </div>
+</div>
+

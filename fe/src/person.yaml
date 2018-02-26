@@ -1,0 +1,28 @@
+
+#   English text translations
+en:
+    title:             Person
+    name:              Name
+    initials:          Initials
+    role:              Role
+    supervisor:        Supervisor
+    select-supervisor: Select supervisor...
+    unit:              Unit
+    select-unit:       Select unit...
+    enter-name:        Enter name of person...
+    enter-initials:    Enter initials of person...
+    enter-role:        Enter role of person...
+
+#   German text translations
+de:
+    title:             Person
+    name:              Name
+    initials:          Initialien
+    role:              Rolle
+    supervisor:        Vorgesetzter
+    select-supervisor: Wähle Vorgesetzten...
+    unit:              Einheit
+    select-unit:       Wähle Einheit...
+    enter-name:        Gib Namen der Person ein...
+    enter-initials:    Gib Initialien der Person ein..
+    enter-role:        Gib Rolle der Person ein..

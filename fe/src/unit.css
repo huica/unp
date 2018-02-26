@@ -1,0 +1,52 @@
+
+@import "./common.css";
+
+@scope unit {
+    div.unit {
+        position:                   relative;
+        width:                      100%;
+        height:                     100%;
+        border-radius:              4px 4px 4px 4px;
+        border:                     1px solid var(--color-brown-light);
+        display:                    flex;
+        flex-direction:             column;
+        justify-content:            flex-start;
+        > .header {
+            height:                 26px;
+            flex-shrink:            0;
+            border-radius:          4px 4px 0 0;
+            background-color:       var(--color-brown-light);
+            color:                  var(--color-white);
+            padding:                2px 10px 2px 10px;
+            display:                flex;
+            flex-direction:         row;
+            justify-content:        space-between;
+            align-items:            center;
+            > .title {
+                font-weight:        bold;
+            }
+        }
+        > .body {
+            padding:                10px 10px 10px 10px;
+            position:               relative;
+            overflow-x:             hidden;
+            overflow-y:             hidden;
+            flex-grow:              1;
+            table {
+                width:              100%;
+                border-spacing:     4px;
+                border-collapse:    separate;
+                td.label {
+                    vertical-align: top;
+                    div.label {
+                        width:      90px;
+                    }
+                }
+                td.element {
+                    width:          100%;
+                }
+            }
+        }
+    }
+}
+

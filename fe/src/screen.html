@@ -1,0 +1,49 @@
+
+<div class="screen" scope="screen">
+    <div class="header">
+        <div class="left">
+            <span class="title">{{ $t("title") }}</span>
+            <span class="subtitle">&mdash; {{ $t("subtitle") }}</span>
+        </div>
+        <div class="right">
+            <select class="lang" name="lang" v-model="gsLang"
+                title="Change the language of the application"
+                v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                <option value="en">EN</option>
+                <option value="de">DE</option>
+            </select>
+        </div>
+    </div>
+    <div class="body">
+        <div class="units"   data-socket="@units"></div>
+        <div class="unit"    data-socket="@unit"></div>
+        <div class="persons" data-socket="@persons"></div>
+        <div class="person"  data-socket="@person"></div>
+    </div>
+    <div class="footer">
+        <div class="left">
+            <i class="fa"
+                v-bind:class="[ dataOnlineStatus == 'online' ? 'fa-chain' : 'fa-chain-broken' ]">
+            </i>
+            &nbsp;&nbsp;
+            <span v-show="dataOnlineStatus === 'online'">
+                <i class="fa fa-user"></i>
+                <span class="users">{{ dataOnlineUsers }}</span>
+                &nbsp;
+                <i v-show="dataOnlineProgress" class="fa fa-refresh fa-spin"></i>
+            </span>
+        </div>
+        <div class="middle">
+            <div v-if="dataScreenHint !== ''">
+                <i class="fa fa-exclamation-triangle"></i>&nbsp;
+                <span v-html="dataScreenHint"></span>
+            </div>
+        </div>
+        <div class="right">
+            <i  class="resizeHandle fa fa-th-large"
+                title="Change the size of the application window"
+                v-tippy="{ delay: [ 1000, 200 ], arrow: true }"
+            ></i>
+        </div>
+    </div>
+</div>
