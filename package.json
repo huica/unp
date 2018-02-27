@@ -22,8 +22,8 @@
         "clean:fe":         "cd fe && npm run clean",
         "clean:be":         "cd be && npm run clean",
         "distclean":        "npm-run-all -s distclean:fe distclean:be",
-        "distclean:ui":     "cd fe && npm run distclean",
-        "distclean:sv":     "cd be && npm run distclean",
+        "distclean:fe":     "cd fe && npm run distclean",
+        "distclean:be":     "cd be && npm run distclean",
         "dev":              "stmux -w always -e \"\\d+ error,!without code style errors\" -m beep,system -- [ \"npm run dev:fe\" : \"npm run dev:be\" ]",
         "dev:fe":           "cd fe && npm run dev",
         "dev:be":           "cd be && npm run dev"
