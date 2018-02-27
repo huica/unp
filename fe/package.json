@@ -37,6 +37,6 @@
         "build:prod":                    "gemstone frontend-build env=production",
         "dev":                           "npm run build watch=true beep=true",
         "clean":                         "shx rm -rf dst",
-        "distclean":                     "shx rm -rf node_modules"
+        "distclean":                     "shx rm -rf dst node_modules"
     }
 }
