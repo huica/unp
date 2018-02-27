@@ -43,6 +43,6 @@
         "dev":                         "npm start",
         "start":                       "nodemon --ext .js --watch . --legacy-watch --ignore node_modules --delay 2 -- src/main.js",
         "clean":                       "shx rm -f unp.db unp.log unp.pid",
-        "distclean":                   "shx rm -rf node_modules"
+        "distclean":                   "shx rm -rf unp.db unp.log unp.pid node_modules"
     }
 }
