@@ -1,7 +1,6 @@
 
 #   English text translations
 en:
-    title:            Roster
     no-items:         No items available
     no-items-filter:  No items left to show due to filter
     filter-items-ph:  Filter items...
@@ -12,7 +11,6 @@ en:
 
 #   German text translations
 de:
-    title:            Roster
     no-items:         Keine Einträge verfügbar
     no-items-filter:  Keine Einträge mehr übrig zum anzeigen aufgrund Filter
     filter-items-ph:  Filtere Einträge...

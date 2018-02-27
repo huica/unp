@@ -8,14 +8,14 @@
             <!-- Person.name (attribute) -->
             <tr>
                 <td class="label">
-                    <div class="label">{{ $t("name") }}:</div>
+                    <div class="label">{{ $t("name") }}:</div> <!-- =(1)= -->
                 </td>
                 <td class="element"
                     title="Change the name of the person"
                     v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
                     <input class="textfield"
                         v-model="dataName"
-                        v-bind:placeholder="$t('enter-name')">
+                        v-bind:placeholder="$t('enter-name')"> <!-- =(2)= -->
                 </td>
             </tr>
 

@@ -1,11 +1,11 @@
 
 <div class="screen" scope="screen">
     <div class="header">
-        <div class="left">
+        <div class="left"> <!-- =(1)= -->
             <span class="title">{{ $t("title") }}</span>
             <span class="subtitle">&mdash; {{ $t("subtitle") }}</span>
         </div>
-        <div class="right">
+        <div class="right"> <!-- =(2)= -->
             <select class="lang" name="lang" v-model="gsLang"
                 title="Change the language of the application"
                 v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
@@ -14,14 +14,14 @@
             </select>
         </div>
     </div>
-    <div class="body">
+    <div class="body"> <!-- =(3)= -->
         <div class="units"   data-socket="@units"></div>
         <div class="unit"    data-socket="@unit"></div>
         <div class="persons" data-socket="@persons"></div>
         <div class="person"  data-socket="@person"></div>
     </div>
     <div class="footer">
-        <div class="left">
+        <div class="left"> <!-- =(4)= -->
             <i class="fa"
                 v-bind:class="[ dataOnlineStatus == 'online' ? 'fa-chain' : 'fa-chain-broken' ]">
             </i>

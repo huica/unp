@@ -1,5 +1,5 @@
 
-/*  external imports  */
+/*  external imports  */ /* =(1)= */
 import gs         from "gemstone"
 import deepEqual  from "deep-equal"
 import { Client } from "graphql-io-client"
@@ -16,7 +16,7 @@ import                 "jquery.scrollto"
 /*  internal imports  */
 import Screen     from "./screen"
 
-/*  integrate Select2 and ComponentJS/ComponentJS-MVC  */
+/*  integrate Select2 and ComponentJS/ComponentJS-MVC  */ /* =(2)= */
 select2(gs.$)
 gs.mvc.latch("mask:vue-result", ({ comp, id, mask }) => {
     /*  for each Select2 usage in the masks...  */
@@ -76,7 +76,7 @@ gs.mvc.latch("mask:vue-result", ({ comp, id, mask }) => {
     })
 })
 
-/*  integrate PerfectScrollbar  */
+/*  integrate PerfectScrollbar  */ /* =(3)= */
 gs.mvc.latch("mask:vue-result", ({ comp, id, mask }) => {
     gs.$(".perfect-scrollbar", mask.$el).each((_, el) => {
         setTimeout(() => {
@@ -85,7 +85,7 @@ gs.mvc.latch("mask:vue-result", ({ comp, id, mask }) => {
     })
 })
 
-/*  provide GraphQL-IO service client  */
+/*  provide GraphQL-IO service client  */ /* =(4)= */
 const sv = (url, cid) => {
     let client = new Client({
         url: url.toString().replace(/\/$/, ""),
@@ -99,7 +99,7 @@ const sv = (url, cid) => {
     return client
 }
 
-/*  boot application via GemstoneJS framework  */
+/*  boot application via GemstoneJS framework  */ /* =(5)= */
 gs.boot({
     app: "unp",
     config: process.config,

@@ -17,7 +17,7 @@ class View extends mvc.View {
         this.plug(this.ui)
 
         /*  make screen resizable  */
-        $(this.ui.$el).resizable({
+        $(this.ui.$el).resizable({ /* =(1)= */
             handleSelector:   ".resizeHandle",
             resizeWidth:      true,
             resizeHeight:     true,
@@ -44,7 +44,7 @@ class View extends mvc.View {
 
 class Model extends mvc.Model {
     create () {
-        /*  define the presentation model  */
+        /*  define the presentation model  */ /* =(2)= */
         this.model({
             "dataSelectedUnit":   { value: "",        valid: "string" },
             "dataSelectedPerson": { value: "",        valid: "string" },
@@ -54,7 +54,7 @@ class Model extends mvc.Model {
             "dataOnlineUsers":    { value: 0,         valid: "number" }
         })
 
-        /*  automatically clear the status model field after 5s  */
+        /*  automatically clear the status model field after 5s  */ /* =(3)= */
         this.timer = null
         this.observe("dataScreenHint", () => {
             if (this.timer !== null)
@@ -81,7 +81,7 @@ export default class Controller extends mvc.Controller {
             console.log(`[SV] ERROR: ${err}`)
         })
 
-        /*  hook into service connection reporting  */
+        /*  hook into service connection reporting  */ /* =(4)= */
         this.sv().on("open",  () => this.value("dataOnlineStatus", "online"))
         this.sv().on("close", () => this.value("dataOnlineStatus", "offline"))
 
@@ -98,7 +98,7 @@ export default class Controller extends mvc.Controller {
         })
         this.spool(() => subscription.unsubscribe())
 
-        /*  master/detail communication  */
+        /*  master/detail communication  */ /* =(5)= */
         this.subscribe("unit-add", (id) => {
             this.my("unit").publish("unit-added", id)
         })

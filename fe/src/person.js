@@ -16,7 +16,7 @@ class View extends mvc.View {
 
 class Model extends mvc.Model {
     create () {
-        /*  define the presentation model  */
+        /*  define the presentation model  */ /* =(1)= */
         this.model({
             "stateDisabled":  { value: true,  valid: "boolean" },
             "dataPerson":     { value: null,  valid: "object" },
@@ -29,7 +29,7 @@ class Model extends mvc.Model {
             "dataBelongsTo":  { value: null,  valid: "(string|null)" }
         })
 
-        /*  derive the enabled/disabled state  */
+        /*  derive the enabled/disabled state  */ /* =(2)= */
         this.observe("dataPerson", (unit) => {
             this.value("stateDisabled", unit === null)
         })
@@ -88,7 +88,7 @@ export default class Controller extends mvc.Controller {
                         supervisor { id }
                         belongsTo  { id }
                     }
-                }`, { id: id }).subscribe((result) => {
+                }`, { id: id }).subscribe((result) => { /* =(3)= */
                     if (result && result.data && result.data.Person) {
                         let person = result.data.Person
                         this.value("dataPerson", person)

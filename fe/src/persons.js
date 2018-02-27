@@ -9,7 +9,7 @@ import i18n                  from "./persons.yaml"
 /*  MVC/CT Controller  */
 export default class Controller extends mvc.Controller {
     create () {
-        this.establish("persons-roster", [ Roster ])
+        this.establish("persons-roster", [ Roster ]) /* =(1)= */
     }
     prepare () {
         /*  provide translated roster title  */
@@ -21,7 +21,7 @@ export default class Controller extends mvc.Controller {
         /*  subscribe to all items via service  */
         let subscription = this.sv().query(`{
             Persons { id name }
-        }`).subscribe((result) => {
+        }`).subscribe((result) => { /* =(2)= */
             if (result && result.data && result.data.Persons)
                 this.value("dataItems", result.data.Persons)
         })
@@ -41,7 +41,7 @@ export default class Controller extends mvc.Controller {
             this.touch("dataItems")
             this.value("cmdScrollToEnd", true)
 
-            /*  notify siblig dialogs  */
+            /*  notify sibling dialogs  */
             this.publish("person-add",    person.id)
             this.publish("person-select", person.id)
         })

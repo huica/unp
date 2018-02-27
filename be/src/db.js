@@ -41,15 +41,16 @@ export default class {
             let persons = {}
             const uuid = (id) => (new UUID(5, "ns:URL", `uri:${id}`)).format()
             const unit = async (id, name, parentUnit) => {
-                let unit      = await dm.Unit.create({
+                let unit = await dm.Unit.create({
                     id: uuid(`unit:${id}`), name: name, abbreviation: id })
                 if (parentUnit) await unit.setParentUnit(parentUnit)
                 units[id] = unit
                 return unit
             }
             const person = async (id, name, role, unit, supervisor) => {
-                let person    = await dm.Person.create({
-                    id: uuid(`person:${id}`), name: name, initials: id, role: role })
+                let person = await dm.Person.create({
+                    id: uuid(`person:${id}`), name: name,
+                    initials: id, role: role })
                 if (unit)       await person.setBelongsTo(unit)
                 if (supervisor) await person.setSupervisor(supervisor)
                 persons[id] = person

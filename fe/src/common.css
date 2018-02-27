@@ -1,5 +1,5 @@
 
-:root {
+:root { /* =(1)= */
     --color-white:                #ffffff;
     --color-grey-light:           #e0e0e0;
     --color-brown-ray:            #fcf4ed;
@@ -14,7 +14,7 @@
     --font-size:                  11pt;
 }
 
-input.textfield {
+input.textfield { /* =(2)= */
     border:                       1px solid var(--color-brown-light) !important;
     border-radius:                4px;
     height:                       20px;

@@ -5,7 +5,7 @@ export class Bridge {
     constructor (fields) {
         this.fields = fields
     }
-    bm2pm (entity, comp) {
+    bm2pm (entity, comp) { /* =(1)= */
         if (entity === null || comp === null)
             return
         this.fields.forEach((field) => {
@@ -27,7 +27,7 @@ export class Bridge {
             }
         })
     }
-    pm2bm (comp, entity) {
+    pm2bm (comp, entity) { /* =(2)= */
         let changeset = {}
         if (entity === null || comp === null)
             return changeset

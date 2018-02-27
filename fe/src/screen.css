@@ -18,7 +18,7 @@ body {
         user-select:               none;
         border-radius:             4px;
         box-shadow:                0 2px 4px 0 #999999;
-        display:                   flex;
+        display:                   flex; /* =(1)= */
         flex-direction:            column;
         justify-content:           space-between;
         > .header {
@@ -52,7 +52,7 @@ body {
             width:                 calc(100% - 20px);
             height:                calc(100% - 20px);
             background-color:      var(--color-white);
-            display:               grid;
+            display:               grid; /* =(2)= */
             grid-template-columns: calc(50% - 7px) calc(50% - 7px);
             grid-template-rows:    calc(50% - 7px) calc(50% - 7px);
             grid-column-gap:       10px;

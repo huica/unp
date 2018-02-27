@@ -3,7 +3,14 @@
     <!-- the dialog header  -->
     <div class="header">
         <div class="title">
-            {{ paramTitle }}
+            {{ paramTitle }} <!-- =(1)= -->
+            <span v-if="dataItemsFiltered.length < dataItems.length"
+                class="count">
+                ({{ dataItemsFiltered.length }}/{{ dataItems.length }})
+            </span>
+            <span v-else class="count">
+                ({{ dataItems.length }})
+            </span>
         </div>
         <div class="icons">
             <!-- filter field  -->
@@ -11,7 +18,7 @@
                 class="filter"
                 v-bind:placeholder="$t('filter-items-ph')"
                 v-bind:title="$t('filter-items-tt')"
-                v-tippy="{ delay: [ 1000, 200 ], arrow: true }">
+                v-tippy="{ delay: [ 1000, 200 ], arrow: true }"> <!-- =(2)= -->
 
             <!-- add button  -->
             <i class="fa fa-plus-circle"
@@ -29,12 +36,12 @@
             ({{ $t("no-items") }})
         </div>
         <div v-if="dataItems.length > 0 && dataItemsFiltered.length === 0"
-            class="hint">
+            class="hint"> <!-- =(3)= -->
             ({{ $t("no-items-filter") }})
         </div>
 
         <!-- interate over all items  -->
-        <div v-id="dataItemsFiltered.length > 0" class="items">
+        <div v-if="dataItemsFiltered.length > 0" class="items">
             <div v-for="item in dataItemsFiltered"
                 v-bind:class="{ item: true, selected: stateItemSelected !== null
                     && stateItemSelected.id === item.id }"

@@ -25,6 +25,11 @@
             align-items:                  center;
             > .title {
                 font-weight:              bold;
+                > .count {
+                    padding-left:         4px;
+                    font-weight:          normal;
+                    font-size:            80%;
+                }
             }
             > .icons {
                 padding-right:            5px;
@@ -60,7 +65,9 @@
             flex-grow:                    1;
             > .hint {
                 width:                    100%;
-                text-align:               center;
+                display:                  flex;
+                flex-direction:           column;
+                align-items:              center;
                 color:                    var(--color-brown-light);
                 font-style:               italic;
                 margin-top:               20px;

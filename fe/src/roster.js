@@ -16,7 +16,7 @@ class View extends mvc.View {
         this.plug(this.ui)
 
         /*  react on a command to scroll and select the end of the items  */
-        this.observe("cmdScrollToEnd", () => {
+        this.observe("cmdScrollToEnd", () => { /* =(1)= */
             setTimeout(() => {
                 $(this.ui.$refs.body).scrollTo("max")
                 let items = this.value("dataItems")
@@ -32,7 +32,7 @@ export default class Model extends mvc.Model {
         /*  create component tree  */
         this.establish("roster-view", [ View ])
 
-        /*  define presentation model  */
+        /*  define presentation model  */ /* =(2)= */
         this.model({
             /*  external model fields  */
             "paramTitle":        { value: "",    valid: "string" },
@@ -48,7 +48,7 @@ export default class Model extends mvc.Model {
             "stateItemSelected": { value: null,  valid: "object" }
         })
 
-        /*  determine items to show  */
+        /*  determine items to show  */ /* =(3)= */
         this.observe([ "dataItems", "dataItemFilter" ], () => {
             let items  = this.value("dataItems")
             let filter = this.value("dataItemFilter")
@@ -59,7 +59,7 @@ export default class Model extends mvc.Model {
                 itemsFiltered = items.slice()
             else {
                 items.forEach((item) => {
-                    if (minimatch(item.name, `*${filter}*`, { nocase: true }))
+                    if (minimatch(item.name || "", `*${filter}*`, { nocase: true }))
                         itemsFiltered.push(item)
                 })
             }
