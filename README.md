@@ -19,6 +19,22 @@ Screenshot
 
 ![unp](screenshot.png)
 
+Usage
+-----
+
+1. Build the UnP application:
+
+    ```
+    $ git clone https://github.com/huica/unp.git
+    $ cd unp
+    $ npm install
+    $ npm run dev
+    ```
+
+2. Access the UnP application:
+
+    [http://localhost:9090/](http://localhost:9090/)
+
 License
 -------
 
