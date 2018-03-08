@@ -94,6 +94,7 @@ const sv = (url, cid) => {
         debug:    4
     })
     client.on("debug", ({ log }) => {
+        /* eslint no-console: off */
         console.log(`[SV]: ${log}`)
     })
     return client

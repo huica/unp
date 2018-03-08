@@ -77,6 +77,7 @@ export default class Controller extends mvc.Controller {
     async prepare () {
         /*  hook into service error reporting  */
         this.sv().on("error", (err) => {
+            /* eslint no-console: off */
             this.value("dataScreenHint", err)
             console.log(`[SV] ERROR: ${err}`)
         })
