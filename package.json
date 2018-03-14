@@ -9,9 +9,9 @@
         "url":              "mailto:rse@engelschall.com"
     },
     "devDependencies": {
-        "npm-run-all":      "~4.1.2",
-        "stmux":            "~1.4.19",
-        "shx":              "~0.2.2"
+        "npm-run-all":      "4.1.2",
+        "stmux":            "1.4.19",
+        "shx":              "0.2.2"
     },
     "scripts": {
         "install":          "npm-run-all -s install:fe install:be",
