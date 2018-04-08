@@ -3,7 +3,7 @@
 import gs         from "gemstone"
 import deepEqual  from "deep-equal"
 import { Client } from "graphql-io-client"
-import                 "jquery-resizable-dom"
+import                 "jquery-resizable-dom/dist/jquery-resizable.js"
 import                 "typopro-web/web/TypoPRO-SourceSansPro/TypoPRO-SourceSansPro.css"
 import                 "font-awesome/css/font-awesome.css"
 import Scrollbar  from "perfect-scrollbar"
