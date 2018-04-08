@@ -62,6 +62,7 @@
             position:                     relative;
             overflow-x:                   hidden;
             overflow-y:                   hidden;
+            height:                       100px; /* any px, but required */
             flex-grow:                    1;
             > .hint {
                 width:                    100%;
