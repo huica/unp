@@ -28,7 +28,7 @@
         "font-awesome":                  "4.7.0",
         "select2":                       "4.0.5",
         "jquery-resizable-dom":          "0.28.0",
-        "graphql-io-client":             "1.1.3",
+        "graphql-io-client":             "1.1.4",
         "perfect-scrollbar":             "1.3.0"
     },
     "scripts": {
