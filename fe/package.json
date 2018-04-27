@@ -11,10 +11,10 @@
     },
     "devDependencies": {
         "gemstone":                      "0.9.31",
-        "gemstone-tool":                 "0.9.32",
-        "gemstone-tool-generator":       "0.9.31",
-        "gemstone-tool-frontend":        "0.9.54",
-        "gemstone-framework-frontend":   "0.9.51",
+        "gemstone-tool":                 "0.9.33",
+        "gemstone-tool-generator":       "0.9.32",
+        "gemstone-tool-frontend":        "0.9.55",
+        "gemstone-framework-frontend":   "0.9.52",
         "shx":                           "0.2.2"
     },
     "dependencies": {
@@ -28,7 +28,7 @@
         "font-awesome":                  "4.7.0",
         "select2":                       "4.0.5",
         "jquery-resizable-dom":          "0.28.0",
-        "graphql-io-client":             "1.1.4",
+        "graphql-io-client":             "1.2.4",
         "perfect-scrollbar":             "1.3.0"
     },
     "scripts": {
