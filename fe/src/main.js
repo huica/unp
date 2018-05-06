@@ -91,6 +91,7 @@ const sv = (url, cid) => {
         url: url.toString().replace(/\/$/, ""),
         encoding: "json",
         compress: true,
+        throttle: 50,
         debug:    4
     })
     client.on("debug", ({ log }) => {
