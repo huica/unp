@@ -9,7 +9,7 @@
         "url":              "mailto:rse@engelschall.com"
     },
     "devDependencies": {
-        "npm-run-all":      "4.1.2",
+        "npm-run-all":      "4.1.3",
         "stmux":            "1.5.1",
         "shx":              "0.2.2"
     },
