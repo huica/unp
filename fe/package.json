@@ -10,11 +10,11 @@
         "url":                           "mailto:rse@engelschall.com"
     },
     "devDependencies": {
-        "gemstone":                      "0.9.32",
-        "gemstone-tool":                 "0.9.35",
-        "gemstone-tool-generator":       "0.9.33",
-        "gemstone-tool-frontend":        "0.9.61",
-        "gemstone-framework-frontend":   "0.9.58",
+        "gemstone":                      "0.9.33",
+        "gemstone-tool":                 "0.9.36",
+        "gemstone-tool-generator":       "0.9.34",
+        "gemstone-tool-frontend":        "0.9.63",
+        "gemstone-framework-frontend":   "0.9.59",
         "shx":                           "0.2.2"
     },
     "dependencies": {
