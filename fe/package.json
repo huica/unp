@@ -11,10 +11,10 @@
     },
     "devDependencies": {
         "gemstone":                      "0.9.33",
-        "gemstone-tool":                 "0.9.36",
-        "gemstone-tool-generator":       "0.9.34",
-        "gemstone-tool-frontend":        "0.9.63",
-        "gemstone-framework-frontend":   "0.9.59",
+        "gemstone-tool":                 "0.9.37",
+        "gemstone-tool-generator":       "0.9.35",
+        "gemstone-tool-frontend":        "0.9.64",
+        "gemstone-framework-frontend":   "0.9.60",
         "shx":                           "0.2.2"
     },
     "dependencies": {
