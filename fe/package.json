@@ -13,8 +13,8 @@
         "gemstone":                      "0.9.33",
         "gemstone-tool":                 "0.9.37",
         "gemstone-tool-generator":       "0.9.35",
-        "gemstone-tool-frontend":        "0.9.65",
-        "gemstone-framework-frontend":   "0.9.61",
+        "gemstone-tool-frontend":        "0.9.66",
+        "gemstone-framework-frontend":   "0.9.62",
         "shx":                           "0.2.2"
     },
     "dependencies": {
@@ -28,7 +28,7 @@
         "font-awesome":                  "4.7.0",
         "select2":                       "4.0.5",
         "jquery-resizable-dom":          "0.32.0",
-        "graphql-io-client":             "1.3.10",
+        "graphql-io-client":             "1.3.13",
         "perfect-scrollbar":             "1.3.0"
     },
     "scripts": {
