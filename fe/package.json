@@ -24,11 +24,11 @@
         "minimatch":                     "3.0.4",
         "jquery":                        "3.3.1",
         "popper.js":                     "1.14.3",
-        "typopro-web":                   "3.7.8",
+        "typopro-web":                   "3.7.9",
         "font-awesome":                  "4.7.0",
         "select2":                       "4.0.5",
         "jquery-resizable-dom":          "0.32.0",
-        "graphql-io-client":             "1.3.14",
+        "graphql-io-client":             "1.4.0",
         "perfect-scrollbar":             "1.4.0"
     },
     "scripts": {

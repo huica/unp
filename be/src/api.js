@@ -20,9 +20,9 @@ export default class {
         let gts = new GTS(db, {
             validator:  null,
             authorizer: null,
-            tracer: async (type, oid, obj, op, via, onto, ctx) => {
+            tracer: async (record, ctx) => {
                 if (ctx.scope !== null)
-                    ctx.scope.record(type, oid, op, via, onto)
+                    ctx.scope.record(record)
             },
             fts: {
                 "Unit":   [ "name" ],
