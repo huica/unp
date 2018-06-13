@@ -11,15 +11,15 @@
     },
     "devDependencies": {
         "gemstone":                      "0.9.33",
-        "gemstone-tool":                 "0.9.37",
-        "gemstone-tool-generator":       "0.9.35",
-        "gemstone-tool-frontend":        "0.9.66",
-        "gemstone-framework-frontend":   "0.9.62",
+        "gemstone-tool":                 "0.9.38",
+        "gemstone-tool-generator":       "0.9.36",
+        "gemstone-tool-frontend":        "0.9.68",
+        "gemstone-framework-frontend":   "0.9.63",
         "shx":                           "0.3.0"
     },
     "dependencies": {
         "deep-equal":                    "1.0.1",
-        "vue-tippy":                     "2.0.13",
+        "vue-tippy":                     "2.0.15",
         "jquery.scrollto":               "2.1.2",
         "minimatch":                     "3.0.4",
         "jquery":                        "3.3.1",
