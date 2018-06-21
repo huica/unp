@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "deep-equal":                    "1.0.1",
-        "vue-tippy":                     "2.0.15",
+        "vue-tippy":                     "2.0.17",
         "jquery.scrollto":               "2.1.2",
         "minimatch":                     "3.0.4",
         "jquery":                        "3.3.1",
@@ -28,7 +28,7 @@
         "font-awesome":                  "4.7.0",
         "select2":                       "4.0.5",
         "jquery-resizable-dom":          "0.32.0",
-        "graphql-io-client":             "1.4.0",
+        "graphql-io-client":             "1.4.1",
         "perfect-scrollbar":             "1.4.0"
     },
     "scripts": {
