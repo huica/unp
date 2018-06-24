@@ -10,11 +10,11 @@
         "url":                           "mailto:rse@engelschall.com"
     },
     "devDependencies": {
-        "gemstone":                      "0.9.33",
-        "gemstone-tool":                 "0.9.38",
-        "gemstone-tool-generator":       "0.9.36",
-        "gemstone-tool-frontend":        "0.9.68",
-        "gemstone-framework-frontend":   "0.9.63",
+        "gemstone":                      "0.9.34",
+        "gemstone-tool":                 "0.9.39",
+        "gemstone-tool-generator":       "0.9.37",
+        "gemstone-tool-frontend":        "0.9.69",
+        "gemstone-framework-frontend":   "0.9.64",
         "shx":                           "0.3.0"
     },
     "dependencies": {
@@ -24,7 +24,7 @@
         "minimatch":                     "3.0.4",
         "jquery":                        "3.3.1",
         "popper.js":                     "1.14.3",
-        "typopro-web":                   "3.7.9",
+        "typopro-web":                   "4.0.1",
         "font-awesome":                  "4.7.0",
         "select2":                       "4.0.5",
         "jquery-resizable-dom":          "0.32.0",
