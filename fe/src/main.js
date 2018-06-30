@@ -68,7 +68,7 @@ gs.mvc.latch("mask:vue-result", ({ comp, id, mask }) => {
                     comp.value(model, value)
             })
 
-        /*  woraround: trigger a change to let the placeholder
+        /*  workaround: trigger a change to let the placeholder
             occur for "multiple" variants  */
         setTimeout(() => {
             gs.$(el).trigger("change")
