@@ -12,9 +12,10 @@ en:
 #   German text translations
 de:
     no-items:         Keine Einträge verfügbar
-    no-items-filter:  Keine Einträge mehr übrig zum anzeigen aufgrund Filter
+    no-items-filter:  Keine Einträge mehr übrig zum Anzeigen aufgrund Filter
     filter-items-ph:  Filtere Einträge...
     filter-items-tt:  Filtere die Liste der Einträge (mit einem Unix glob-Ausdruck)
     add-item-tt:      Füge Eintrag hinzu
     delete-item-tt:   Lösche diesen Eintrag
     unnamed-item:     unbenannter Eintrag
+
