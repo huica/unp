@@ -88,11 +88,11 @@ gs.mvc.latch("mask:vue-result", ({ comp, id, mask }) => {
 /*  provide GraphQL-IO service client  */ /* =(4)= */
 const sv = (url, cid) => {
     let client = new Client({
-        url: url.toString().replace(/\/$/, ""),
+        url: url.toString().replace(/#debug$/, "").replace(/\/$/, ""),
         encoding: "json",
         compress: true,
         throttle: 50,
-        debug:    4
+        debug:    0
     })
     client.on("debug", ({ log }) => {
         /* eslint no-console: off */
