@@ -10,7 +10,7 @@
         "url":                         "mailto:rse@engelschall.com"
     },
     "devDependencies": {
-        "nodemon":                     "1.18.1",
+        "nodemon":                     "1.18.9",
         "shx":                         "0.3.2"
     },
     "dependencies": {
@@ -18,23 +18,23 @@
         "babel-polyfill":              "6.26.0",
         "babel-preset-env":            "1.7.0",
         "co":                          "4.6.0",
-        "microkernel":                 "2.0.1",
-        "microkernel-mod-ctx":         "0.9.6",
-        "microkernel-mod-options":     "0.9.7",
-        "microkernel-mod-logger":      "0.9.13",
-        "microkernel-mod-daemon":      "0.9.11",
-        "microkernel-mod-title":       "0.9.8",
-        "microkernel-mod-shutdown":    "0.9.7",
-        "microkernel-mod-sequelize":   "1.2.8",
-        "microkernel-mod-graphqlio":   "1.5.0",
-        "graphql":                     "0.13.2",
-        "graphql-tools":               "3.0.5",
-        "graphql-tools-types":         "1.1.24",
-        "graphql-tools-sequelize":     "2.0.6",
-        "sequelize":                   "4.38.0",
-        "sqlite3":                     "4.0.1",
-        "pure-uuid":                   "1.5.3",
-        "chance":                      "1.0.16"
+        "microkernel":                 "2.0.4",
+        "microkernel-mod-ctx":         "0.9.8",
+        "microkernel-mod-options":     "0.9.9",
+        "microkernel-mod-logger":      "0.9.15",
+        "microkernel-mod-daemon":      "0.9.13",
+        "microkernel-mod-title":       "0.9.10",
+        "microkernel-mod-shutdown":    "0.9.9",
+        "microkernel-mod-sequelize":   "1.2.10",
+        "microkernel-mod-graphqlio":   "1.6.2",
+        "graphql":                     "14.0.2",
+        "graphql-tools":               "4.0.3",
+        "graphql-tools-types":         "1.2.0",
+        "graphql-tools-sequelize":     "2.1.0",
+        "sequelize":                   "4.42.0",
+        "sqlite3":                     "4.0.4",
+        "pure-uuid":                   "1.5.6",
+        "chance":                      "1.0.18"
     },
     "engines": {
         "node":                        ">=8.0.0"
