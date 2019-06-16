@@ -46,8 +46,6 @@ class Model extends mvc.Model {
     create () {
         /*  define the presentation model  */ /* =(2)= */
         this.model({
-            "dataSelectedUnit":   { value: "",        valid: "string" },
-            "dataSelectedPerson": { value: "",        valid: "string" },
             "dataScreenHint":     { value: "",        valid: "string" },
             "dataOnlineStatus":   { value: "offline", valid: "string" },
             "dataOnlineProgress": { value: false,     valid: "boolean" },

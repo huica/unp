@@ -1,5 +1,6 @@
 
-import GTS from "graphql-tools-sequelize"
+import GTS       from "graphql-tools-sequelize"
+import Sequelize from "sequelize"
 
 export default class {
     get module () {
@@ -60,8 +61,8 @@ export default class {
                 return db.transaction({
                     autocommit:     false,
                     deferrable:     true,
-                    type:           db.Transaction.TYPES.DEFERRED,
-                    isolationLevel: db.Transaction.ISOLATION_LEVELS.SERIALIZABLE
+                    type:           Sequelize.Transaction.TYPES.DEFERRED,
+                    isolationLevel: Sequelize.Transaction.ISOLATION_LEVELS.SERIALIZABLE
                 }, (tx) => cb(tx))
             }
         })
