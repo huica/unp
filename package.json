@@ -1,11 +1,11 @@
 {
     "name":                 "unp",
     "version":              "0.0.0",
-    "homepage":             "https://architecturedissertation.com/",
+    "homepage":             "https://huica.org/",
     "description":          "Units and Persons (UnP)",
     "keywords":             [ "huica", "example" ],
     "author": {
-        "name":             "Ralf S. Engelschall",
+        "name":             "Dr. Ralf S. Engelschall",
         "url":              "mailto:rse@engelschall.com"
     },
     "devDependencies": {

@@ -1,12 +1,12 @@
 {
     "name":                              "unp-fe",
     "version":                           "0.0.0",
-    "homepage":                          "http://architecturedissertation.com/",
+    "homepage":                          "https://huica.org/",
     "description":                       "Units and Persons (UnP) -- Frontend",
     "keywords":                          [ "units", "persons", "example", "frontend" ],
     "license":                           "Apache-2.0",
     "author": {
-        "name":                          "Ralf S. Engelschall",
+        "name":                          "Dr. Ralf S. Engelschall",
         "url":                           "mailto:rse@engelschall.com"
     },
     "devDependencies": {
