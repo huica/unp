@@ -12,7 +12,7 @@
     "devDependencies": {
         "gemstone":                      "0.9.36",
         "gemstone-tool":                 "0.9.46",
-        "gemstone-tool-generator":       "0.9.43",
+        "gemstone-tool-generator":       "0.9.44",
         "gemstone-tool-frontend":        "0.9.87",
         "gemstone-framework-frontend":   "0.9.75",
         "shx":                           "0.3.2"
