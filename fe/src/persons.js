@@ -19,7 +19,7 @@ export default class Controller extends mvc.Controller {
         }, { boot: true })
 
         /*  subscribe to all items via service  */
-        let subscription = this.sv().query(`{
+        const subscription = this.sv().query(`{
             Persons { id name }
         }`).subscribe((result) => { /* =(2)= */
             if (result && result.data && result.data.Persons)
@@ -30,13 +30,13 @@ export default class Controller extends mvc.Controller {
         /*  attach to the roster events  */
         this.observe("eventItemAdd", async () => {
             /*  add item via service  */
-            let result = await this.sv().mutation(`{
+            const result = await this.sv().mutation(`{
                 Person { create { id name } }
             }`)
 
             /*  add item in user interface  */
-            let person = result.data.Person.create
-            let items = this.value("dataItems")
+            const person = result.data.Person.create
+            const items = this.value("dataItems")
             items.push(person)
             this.touch("dataItems")
             this.value("cmdScrollToEnd", true)

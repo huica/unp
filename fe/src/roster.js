@@ -19,7 +19,7 @@ class View extends mvc.View {
         this.observe("cmdScrollToEnd", () => { /* =(1)= */
             setTimeout(() => {
                 $(this.ui.$refs.body).scrollTo("max")
-                let items = this.value("dataItems")
+                const items = this.value("dataItems")
                 this.value("eventItemSelect", items[items.length - 1])
             }, 100)
         })
@@ -50,8 +50,8 @@ export default class Model extends mvc.Model {
 
         /*  determine items to show  */ /* =(3)= */
         this.observe([ "dataItems", "dataItemFilter" ], () => {
-            let items  = this.value("dataItems")
-            let filter = this.value("dataItemFilter")
+            const items  = this.value("dataItems")
+            const filter = this.value("dataItemFilter")
 
             /*  determine filtered items  */
             let itemsFiltered = []
@@ -66,7 +66,7 @@ export default class Model extends mvc.Model {
             this.value("dataItemsFiltered", itemsFiltered)
 
             /*  determine selected item  */
-            let itemSelected = this.value("stateItemSelected")
+            const itemSelected = this.value("stateItemSelected")
             if (itemSelected !== null
                 && items.filter((item) => item.id === itemSelected.id).length === 0)
                 this.value("stateItemSelected", null)

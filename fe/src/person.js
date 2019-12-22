@@ -42,7 +42,7 @@ export default class Controller extends mvc.Controller {
     }
     prepare () {
         /*  define a data bridge between presentation and business model  */
-        let bridge = new Bridge([
+        const bridge = new Bridge([
             { pm: "dataName",         bm: "name",         type: "attr" },
             { pm: "dataInitials",     bm: "initials",     type: "attr" },
             { pm: "dataRole",         bm: "role",         type: "attr" },
@@ -58,7 +58,7 @@ export default class Controller extends mvc.Controller {
         })
         this.subscribe("person-selected", (id) => {
             /*  short-circuit on re-selection  */
-            let person = this.value("dataPerson")
+            const person = this.value("dataPerson")
             if (person !== null && person.id === id)
                 return
 
@@ -90,7 +90,7 @@ export default class Controller extends mvc.Controller {
                     }
                 }`, { id: id }).subscribe((result) => { /* =(3)= */
                     if (result && result.data && result.data.Person) {
-                        let person = result.data.Person
+                        const person = result.data.Person
                         this.value("dataPerson", person)
                         bridge.bm2pm(person, this)
                     }
@@ -104,8 +104,8 @@ export default class Controller extends mvc.Controller {
             if (timer !== null)
                 clearTimeout(timer)
             timer = setTimeout(async () => {
-                let person = this.value("dataPerson")
-                let changeset = bridge.pm2bm(this, person)
+                const person = this.value("dataPerson")
+                const changeset = bridge.pm2bm(this, person)
                 if (Object.keys(changeset).length === 0)
                     return
                 await this.sv().mutation(`($id: UUID!, $with: JSON!) {
@@ -120,7 +120,7 @@ export default class Controller extends mvc.Controller {
         }, { op: "changed" })
 
         /*  subscribe to list of Units and Persons  */
-        let subscription = this.sv().query(`{
+        const subscription = this.sv().query(`{
             Units   { id name }
             Persons { id name }
         }`).subscribe((result) => {

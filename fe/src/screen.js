@@ -36,7 +36,7 @@ class View extends mvc.View {
 
         /*  allow user to easily switch the UI language  */
         mousetrap.bind("ctrl+a l", () => {
-            let lang = this.value("gsLang")
+            const lang = this.value("gsLang")
             this.value("gsLang", lang !== "en" ? "en" : "de")
         })
     }
@@ -89,7 +89,7 @@ export default class Controller extends mvc.Controller {
         this.spool(() => this.sv().disconnect())
 
         /*  subscribe to the server status  */
-        let subscription = this.sv().query(`{
+        const subscription = this.sv().query(`{
             _Server { clients }
         }`).subscribe((result) => {
             if (result && result.data && result.data._Server)

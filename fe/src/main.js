@@ -22,13 +22,13 @@ gs.mvc.latch("mask:vue-result", ({ comp, id, mask }) => {
     /*  for each Select2 usage in the masks...  */
     gs.$("select.select2", mask.$el).each((_, el) => {
         /*  figure out the Select2 usage parameters  */
-        let model       = gs.$(el).data("model")
-        let modelSource = gs.$(el).data("model-source")
-        let multiple    = !!(gs.$(el).attr("multiple"))
+        const model       = gs.$(el).data("model")
+        const modelSource = gs.$(el).data("model-source")
+        const multiple    = !!(gs.$(el).attr("multiple"))
 
         /*  observe the ComponentJS model  */
         comp.observe(model, (_, value) => {
-            let allowed = comp.value(modelSource)
+            const allowed = comp.value(modelSource)
             if (multiple) {
                 /*  sanity check new ComponentJS model value  */
                 value.forEach((id) => {
@@ -57,8 +57,8 @@ gs.mvc.latch("mask:vue-result", ({ comp, id, mask }) => {
         gs.$(el)
             .select2({ width: "100%" })
             .on("change", (ev) => {
-                let model    = gs.$(ev.target).data("model")
-                let multiple = !!(gs.$(ev.target).attr("multiple"))
+                const model    = gs.$(ev.target).data("model")
+                const multiple = !!(gs.$(ev.target).attr("multiple"))
                 let value = gs.$(ev.target).val()
                 if (multiple && value.length === 1 && value[0] === "")
                     value = []
@@ -87,7 +87,7 @@ gs.mvc.latch("mask:vue-result", ({ comp, id, mask }) => {
 
 /*  provide GraphQL-IO service client  */ /* =(4)= */
 const sv = (url, cid) => {
-    let client = new Client({
+    const client = new Client({
         url: url.toString().replace(/#debug$/, "").replace(/\/$/, ""),
         encoding: "json",
         compress: true,

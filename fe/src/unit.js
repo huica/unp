@@ -42,7 +42,7 @@ export default class Controller extends mvc.Controller {
     }
     prepare () {
         /*  define a data bridge between presentation and business model  */
-        let bridge = new Bridge([
+        const bridge = new Bridge([
             { pm: "dataName",         bm: "name",         type: "attr" },
             { pm: "dataAbbreviation", bm: "abbreviation", type: "attr" },
             { pm: "dataParentUnit",   bm: "parentUnit",   type: "rel?" },
@@ -58,7 +58,7 @@ export default class Controller extends mvc.Controller {
         })
         this.subscribe("unit-selected", (id) => {
             /*  short-circuit on re-selection  */
-            let unit = this.value("dataUnit")
+            const unit = this.value("dataUnit")
             if (unit !== null && unit.id === id)
                 return
 
@@ -90,7 +90,7 @@ export default class Controller extends mvc.Controller {
                     }
                 }`, { id: id }).subscribe((result) => { /* =(3)= */
                     if (result && result.data && result.data.Unit) {
-                        let unit = result.data.Unit
+                        const unit = result.data.Unit
                         this.value("dataUnit", unit)
                         bridge.bm2pm(unit, this)
                     }
@@ -104,8 +104,8 @@ export default class Controller extends mvc.Controller {
             if (timer !== null)
                 clearTimeout(timer)
             timer = setTimeout(async () => {
-                let unit = this.value("dataUnit")
-                let changeset = bridge.pm2bm(this, unit)
+                const unit = this.value("dataUnit")
+                const changeset = bridge.pm2bm(this, unit)
                 if (Object.keys(changeset).length === 0)
                     return
                 await this.sv().mutation(`($id: UUID!, $with: JSON!) {
@@ -120,7 +120,7 @@ export default class Controller extends mvc.Controller {
         }, { op: "changed" })
 
         /*  subscribe to list of Units and Persons  */
-        let subscription = this.sv().query(`{
+        const subscription = this.sv().query(`{
             Units   { id name }
             Persons { id name }
         }`).subscribe((result) => {
