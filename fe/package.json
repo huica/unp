@@ -18,18 +18,18 @@
         "shx":                           "0.3.2"
     },
     "dependencies": {
-        "deep-equal":                    "2.0.1",
-        "vue-tippy":                     "4.2.1",
+        "deep-equal":                    "2.0.3",
+        "vue-tippy":                     "4.4.0",
         "jquery.scrollto":               "2.1.2",
         "minimatch":                     "3.0.4",
-        "jquery":                        "3.4.1",
-        "popper.js":                     "1.16.0",
-        "typopro-web":                   "4.2.2",
+        "jquery":                        "3.5.1",
+        "popper.js":                     "1.16.1",
+        "typopro-web":                   "4.2.3",
         "font-awesome":                  "4.7.0",
         "select2":                       "4.0.5",
         "jquery-resizable-dom":          "0.35.0",
-        "graphql-io-client":             "1.8.2",
-        "perfect-scrollbar":             "1.4.0"
+        "graphql-io-client":             "1.8.4",
+        "perfect-scrollbar":             "1.5.0"
     },
     "upd": [ "!select2" ],
     "scripts": {
