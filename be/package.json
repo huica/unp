@@ -10,7 +10,7 @@
         "url":                         "mailto:rse@engelschall.com"
     },
     "devDependencies": {
-        "nodemon":                     "2.0.2",
+        "nodemon":                     "2.0.4",
         "shx":                         "0.3.2"
     },
     "dependencies": {
@@ -25,16 +25,16 @@
         "microkernel-mod-daemon":      "0.9.15",
         "microkernel-mod-title":       "0.9.12",
         "microkernel-mod-shutdown":    "0.9.11",
-        "microkernel-mod-sequelize":   "1.3.1",
-        "microkernel-mod-graphqlio":   "1.8.2",
-        "graphql":                     "14.5.8",
-        "graphql-tools":               "4.0.6",
-        "graphql-tools-types":         "1.2.3",
-        "graphql-tools-sequelize":     "2.2.1",
-        "sequelize":                   "5.21.3",
-        "sqlite3":                     "4.1.1",
-        "pure-uuid":                   "1.5.8",
-        "chance":                      "1.1.4"
+        "microkernel-mod-sequelize":   "1.3.2",
+        "microkernel-mod-graphqlio":   "1.8.4",
+        "graphql":                     "15.1.0",
+        "graphql-tools":               "6.0.9",
+        "graphql-tools-types":         "1.3.0",
+        "graphql-tools-sequelize":     "2.2.3",
+        "sequelize":                   "5.21.13",
+        "sqlite3":                     "4.2.0",
+        "pure-uuid":                   "1.6.0",
+        "chance":                      "1.1.6"
     },
     "engines": {
         "node":                        ">=8.0.0"
