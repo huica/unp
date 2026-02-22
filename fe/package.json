@@ -21,7 +21,7 @@
         "deep-equal":                    "2.0.3",
         "vue-tippy":                     "4.4.0",
         "jquery.scrollto":               "2.1.2",
-        "minimatch":                     "3.0.4",
+        "minimatch":                     "10.2.1",
         "jquery":                        "3.5.1",
         "popper.js":                     "1.16.1",
         "typopro-web":                   "4.2.3",
